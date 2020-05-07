@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "heroku-prebuild": "node seed/seeder.js",
     "seed": "node seed/seeder.js",
     "dev": "nodemon app.js"
   },
