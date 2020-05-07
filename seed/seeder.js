@@ -2,7 +2,8 @@ var async = require("async");
 var mongoose = require("mongoose");
 var db = require("../models");
 
-mongoose.connect("mongodb://localhost/inventory", {
+// mongoose.connect("mongodb://localhost/inventory", {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useFindAndModify: false
 });
