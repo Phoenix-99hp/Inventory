@@ -1,0 +1,51 @@
+<div id="pageContainer">
+    <header>
+        <h1 id="title">Smart-Mart</h1>
+        <nav>
+            <ul class='navbar'>
+                <li class="nav-item home">
+                    <a href='/store'>Home</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/search'>Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/search'>Search Categories</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/create'>New Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/create'>New Category</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <form method='POST' action=''>
+            <h4 id="form-title">Search Products</h4>
+            <div class="form-group-single">
+                <input name='name' id='name' class='search' placeholder="Search Products..." required="true"></input>
+            </div>
+            <button id="submitBtn" type='submit'>Submit</button>
+        </form>
+        <div id="searchResults">
+            {{#if results}}
+            {{#each results}}
+            <div class="product">
+                <h4 class="product-name"><a class="p-name" href={{this.url}}>{{this.name}}</a></h4>
+                <p class="body-para">{{this.description}}</p>
+                <p class="body-para">${{this.price}}</p>
+                <p class="body-para"><a href={{this.category.url}}>{{this.category.name}}</a></p>
+                <p class="body-para">Stock: {{this.stock}}</p>
+            </div>
+            {{/each}}
+            {{/if}}
+        </div>
+    </div>
+    <footer>© Smart-Mart</footer>
+</div>

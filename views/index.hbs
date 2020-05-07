@@ -1,0 +1,41 @@
+<div id="pageContainer">
+    <header>
+        <h1 id="title">{{title}}</h1>
+        <nav>
+            <ul class='navbar'>
+                <li class="nav-item home">
+                    <a href='/store'>Home</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/search'>Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/search'>Search Categories</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/create'>New Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/create'>New Category</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <p id="home-greeting">Welcome to {{title}}</p>
+        {{#each products}}
+        <div class={{#if @last}}"product-last"{{else}}"product"{{/if}}>
+            <h4 class="product-name"><a class="p-name" href={{this.url}}>{{this.name}}</a></h4>
+            <p class="body-para">{{#if this.description}}{{this.description}}{{/if}}</p>
+            <p class="body-para">{{#priceify this.price}}{{/priceify}}</p>
+            <p class="body-para"><a href={{this.category.url}}>{{this.category.name}}</a></p>
+            <p class="body-para">Stock: {{#if this.stock}}{{this.stock}}{{else}}Unlisted{{/if}}</p>
+        </div>
+        {{/each}}
+    </div>
+    <footer>© Smart-Mart</footer>
+</div>

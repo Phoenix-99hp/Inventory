@@ -1,0 +1,47 @@
+<div id="pageContainer">
+    <header>
+        <h1 id="title">Smart-Mart</h1>
+        <nav>
+            <ul class='navbar'>
+                <li class="nav-item home">
+                    <a href='/store'>Home</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/search'>Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/search'>Search Categories</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/create'>New Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/create'>New Category</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="product-detail">
+            <p id="form-title">Product: <span class="u-name">{{details.name}}</span></p>
+            <div class="product-full">
+                <p class="body-para-top">{{details.description}}</p>
+                <p class="body-para">{{#priceify details.price}}{{/priceify}}</p>
+                {{#if details.category}}<p class="body-para"><a
+                        href={{details.category.url}}>{{details.category.name}}</a>
+                </p>
+                {{/if}}
+                <p class="body-para">Stock: {{#if details.stock}}{{details.stock}}{{else}}Unlisted{{/if}}</p>
+                <div id="btnContainer">
+                    <a id="delete" href={{#stringify details.url "/delete"}}{{/stringify}}>Delete</a>
+                    <a id="update" href={{#stringify details.url "/update"}}{{/stringify}}>Update</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>© Smart-Mart</footer>
+</div>

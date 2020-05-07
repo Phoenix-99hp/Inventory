@@ -1,0 +1,42 @@
+<div id="pageContainer">
+    <header>
+        <h1 id="title">Smart-Mart</h1>
+        <nav>
+            <ul class='navbar'>
+                <li class="nav-item home">
+                    <a href='/store'>Home</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/search'>Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/search'>Search Categories</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/create'>New Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/create'>New Category</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="product-detail">
+            <p id="form-title">Categories</p>
+            {{#if results}}
+            <ul class="bullets-cat">
+                {{#each results}}
+                <li class={{#if @first}}"bulleted-top"{{else}}"bulleted"{{/if}}><a href={{this.url}}>{{this.name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </div>
+    </div>
+    <footer>© Smart-Mart</footer>
+</div>

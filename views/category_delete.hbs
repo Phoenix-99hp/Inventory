@@ -1,0 +1,44 @@
+<div id="pageContainer">
+    <header>
+        <h1 id="title">Smart-Mart</h1>
+        <nav>
+            <ul class='navbar'>
+                <li class="nav-item home">
+                    <a href='/store'>Home</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/search'>Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/search'>Search Categories</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/create'>New Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/create'>New Category</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <form method='POST' action=''>
+            <h4 id="form-title">Do you really want to delete: <span class="u-name">{{category.name}}</span>?</h4>
+            <div class="form-group">
+                <label for='name'>Name </label>
+                <br>
+                <input name='name' class='wide' id='name' required="true" value="{{category.name}}"
+                    readonly="true"></input>
+            </div>
+            <button id="deleteBtn" type='submit'>Delete</button>
+        </form>
+        <div id="searchResults">
+            <p class="no-results">Note: Deleting a category will delete all associated products</p>
+        </div>
+    </div>
+    <footer>© Smart-Mart</footer>
+</div>

@@ -1,0 +1,84 @@
+<div id="pageContainer">
+    <header>
+        <h1 id="title">Smart-Mart</h1>
+        <nav>
+            <ul class='navbar'>
+                <li class="nav-item home">
+                    <a href='/store'>Home</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/search'>Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/search'>Search Categories</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/create'>New Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/create'>New Category</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <form method='POST' action=''>
+            <h4 id="form-title">Update product: <span class="u-name">{{toUpdate.name}}</span></h4>
+            <div class="form-group">
+                <label for='name'>Name </label>
+                <br>
+                <input name='name' class='wide' id='name' value="{{toUpdate.name}}" required="true"></input>
+            </div>
+            <div class="form-group">
+                <label for='description'>Description (optional) </label>
+                <br>
+                <textarea name='description' class='wide'
+                    id='description'>{{#if toUpdate.description}}{{toUpdate.description}}{{/if}}</textarea>
+            </div>
+            <div class="form-group">
+                <label for='price'>Price </label>
+                <br>
+                <input name='price' class='wide' id='price' value={{toUpdate.price}} required="true"></input>
+            </div>
+            <div class="form-group">
+                <label for='name'>Category </label>
+                <br>
+                <select name='category' class='wide' id='category' required="true">
+                    {{#if toUpdate.category}}
+                    <option selected="selected" disabled="true">Select an option...</option>
+                    {{#each categories}}
+                    {{!-- <option selected={{#isSelected ../toUpdate.category.name this.name}}{{/isSelected}}>
+                        {{this.name}}
+                    </option> --}}
+                    <option>
+                        {{this.name}}
+                    </option>
+                    {{/each}}
+
+                    {{else}}
+                    <option disabled="true" selected="true">Select an option...</option>
+                    {{#each categories}}
+                    <option>
+                        {{this.name}}
+                    </option>
+                    {{/each}}
+                    {{/if}}
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for='stock'>Number in stock (optional) </label>
+                <br>
+                <input name='stock' class='wide' id='stock'
+                    value={{#if toUpdate.stock}}{{toUpdate.stock}}{{else}}''{{/if}}></input>
+            </div>
+
+            <button id="submitBtn" type='submit'>Submit</button>
+        </form>
+    </div>
+    <footer>© Smart-Mart</footer>
+</div>

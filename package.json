@@ -1,0 +1,21 @@
+{
+  "name": "inventory",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "seed": "node seed/seeder.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "^4.0.2",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.9.7",
+    "mongoose-lean-virtuals": "^0.6.1",
+    "morgan": "~1.9.1"
+  }
+}

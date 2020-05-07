@@ -1,0 +1,69 @@
+<div id="pageContainer">
+    <header>
+        <h1 id="title">Smart-Mart</h1>
+        <nav>
+            <ul class='navbar'>
+                <li class="nav-item home">
+                    <a href='/store'>Home</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/search'>Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/search'>Search Categories</a>
+                </li>
+                <br>
+                <br>
+                <li class="nav-item">
+                    <a href='/store/products/create'>New Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href='/store/categories/create'>New Category</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <form method='POST' action=''>
+            <h4 id="form-title">Do you really want to delete: <span class="u-name">{{item.name}}</span>?</h4>
+            <div class="form-group">
+                <label for='name'>Name: </label>
+                <br>
+                <input name='name' class='wide' id='name' required="true" value="{{item.name}}" readonly="true"></input>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for='description'>Description </label>
+                <br>
+                <textarea name='description' class='wide' id='description'
+                    readonly="true">{{#if item.description}}{{item.description}}{{/if}}</textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for='price'>Price </label>
+                <br>
+                <input name='price' class='wide' id='price' required="true" value={{#priceify item.price}}{{/priceify}}
+                    readonly="true"></input>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for='name'>Category </label>
+                <br>
+                <select name='category' id='category' required="true">
+                    <option disabled="true" class='wide' selected="true">{{item.category.name}}</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for='stock'>Number in stock </label>
+                <br>
+                <input name='stock' class='wide' id='stock' value={{#if item.stock}}{{item.stock}}{{else}}''{{/if}}
+                    readonly="true"></input>
+            </div>
+            <button id="deleteBtn" type='submit'>Delete</button>
+        </form>
+    </div>
+    <footer>© Smart-Mart</footer>
+</div>
