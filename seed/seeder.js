@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var db = require("../models");
 
 // mongoose.connect("mongodb://localhost/inventory", {
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useFindAndModify: false
 });
