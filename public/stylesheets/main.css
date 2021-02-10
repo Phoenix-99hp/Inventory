@@ -1,0 +1,320 @@
+#home-greeting {
+	text-align: center;
+	height: fit-content;
+	margin-bottom: 20px;
+	font-family: "Gotu", sans-serif;
+	flex: 1 1 100%;
+}
+
+#container {
+	display: flex;
+	align-self: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* margin: 0 auto; */
+	max-width: 1500px;
+	width: 100%;
+	flex: 1 1 auto;
+	/* margin-bottom: 50px; */
+	align-content: baseline;
+	/* padding-right: 50px; */
+	padding-bottom: 50px;
+	/* padding-left: 50px; */
+}
+
+.product {
+	padding: 10px;
+	margin: 10px;
+	width: 20%;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.product,
+.product-last {
+	min-width: 178px;
+	max-height: 164px;
+	max-width: 284px;
+}
+
+.body-para {
+	margin-top: 10px;
+	text-align: center;
+	font-family: "Gotu", sans-serif;
+}
+
+.product-last {
+	width: 20%;
+	padding: 10px;
+	margin: 10px;
+	border: 2px solid black;
+}
+
+.product-name {
+	font-weight: bold;
+	text-align: center;
+}
+
+.p-name {
+	color: rgb(17, 0, 255);
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: 2px 1px 1px rgb(0, 183, 255);
+	font-family: "Gotu", sans-serif;
+}
+
+.p-name:hover {
+	text-decoration: underline;
+}
+
+form,
+#product-detail {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 699.109px;
+	width: 100%;
+	margin-right: 10px;
+	margin-left: 10px;
+	/* min-width: 699.109px; */
+	/* width: 600px; */
+	/* margin: 0 auto; */
+	/* margin-bottom: 20px; */
+	/* margin-top: 20px; */
+	height: fit-content;
+	padding: 15px;
+	background-color: rgb(236, 241, 243);
+	border-radius: 8px;
+}
+
+.form-group {
+	flex: 1 1 100%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.form-group-single {
+	flex: 1 1 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+input {
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 20px;
+	outline: none;
+	box-shadow: none;
+}
+
+input,
+select,
+textarea {
+	max-width: 400px;
+	width: 100%;
+	margin-top: 10px;
+	border: 1.5px solid black;
+	border-radius: 10px;
+	font-size: 14px;
+}
+
+input,
+select {
+	height: 30px;
+}
+select {
+	max-width: 423px;
+	width: 100%;
+}
+
+textarea {
+	resize: none;
+	outline: none;
+	padding: 10px;
+}
+
+#btnContainer {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 10px;
+	height: 30px;
+}
+
+#submitBtn {
+	text-decoration: none;
+	cursor: pointer;
+	float: right;
+	/* margin-left: 5px; */
+	border-radius: 3px;
+	/* background-color: rgb(112, 226, 112); */
+	border: 2px solid rgb(112, 226, 112);
+	color: black;
+	height: 32px;
+	width: 120px;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	font-size: 14px;
+	/* margin-top: 2.5px; */
+}
+
+#submitBtn:hover {
+	background-color: rgb(112, 226, 112);
+}
+
+#deleteBtn {
+	cursor: pointer;
+	text-decoration: none;
+	/* float: right; */
+	/* margin-left: 5px; */
+	border-radius: 3px;
+	/* background-color: red; */
+	border: 2px solid red;
+	color: black;
+	/* height: 30px; */
+	height: 32px;
+	width: 120px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 14px;
+	margin-top: 2.5px;
+	/* width: 60px; */
+}
+
+#deleteBtn:hover {
+	background-color: red;
+	color: white;
+}
+
+#update {
+	text-decoration: none;
+	cursor: pointer;
+	/* float: right; */
+	background-color: yellow;
+	padding: 6px;
+	border-radius: 3px;
+	border: 2px solid black;
+	color: black;
+	margin-right: 5px;
+	font-size: 14px;
+	width: 60px;
+}
+
+#delete {
+	text-decoration: none;
+	cursor: pointer;
+	float: right;
+	background-color: red;
+	padding: 6px;
+	border-radius: 3px;
+	border: 2px solid black;
+	color: white;
+	font-size: 14px;
+	width: 60px;
+}
+
+#update:hover,
+#delete:hover {
+	opacity: 0.7;
+}
+
+.search {
+	margin-top: 0;
+}
+
+.center {
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+.note {
+	color: red;
+	margin-right: 5px;
+}
+
+.no-results {
+	padding: 20px;
+	text-align: left;
+	font-family: "Gotu", sans-serif;
+}
+
+#greeting,
+#form-title {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 25px;
+	color: black;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#greetingErr {
+	text-align: center;
+	color: red;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+label {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#errMsg {
+	font-size: 16px;
+	text-align: center;
+}
+
+.u-name {
+	color: rgb(17, 0, 255);
+	font-weight: bold;
+	text-shadow: 2px 1px 2px rgb(0, 183, 255);
+	font-family: "Gotu", sans-serif;
+	font-size: 30px;
+}
+
+@media screen and (max-width: 350px) {
+	#form-title,
+	.u-name {
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	input,
+	textarea {
+		max-width: 150px;
+	}
+
+	select {
+		max-width: 173px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#btnContainer {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 200px) {
+	input,
+	textarea {
+		max-width: 100px;
+	}
+
+	select {
+		max-width: 123px;
+	}
+}
+
+@media screen and (max-width: 890px) {
+	.product,
+	.product-last {
+		flex: 1 1 50%;
+	}
+}

@@ -1,0 +1,163 @@
+header {
+	/* margin-top: 15px; */
+	display: flex;
+	/* justify-content: center; */
+	flex: 0 1 150px;
+	align-items: center;
+	padding-right: 50px;
+	padding-left: 50px;
+	justify-content: center;
+}
+
+#headerInner {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/* border: 2px solid red; */
+	position: relative;
+	max-width: 1550px;
+}
+
+#title {
+	/* flex: 1 0 auto; */
+	text-align: center;
+	/* margin-left: 275.48px; */
+	font-size: 32px;
+	color: rgb(17, 0, 255);
+	font-size: 60px;
+	font-weight: bold;
+	text-shadow: 2px 1px 2px rgb(0, 183, 255);
+	font-family: "Gotu", sans-serif;
+}
+
+.home {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+a {
+	color: rgb(0, 183, 255);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+nav {
+	position: absolute;
+	right: 0;
+	/* float: right; */
+}
+
+#dropdown {
+	display: none;
+}
+
+.nav-item {
+	display: inline;
+	padding: 8px;
+}
+
+.navbar {
+	padding-left: 0;
+	padding: 10px;
+	position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+	header {
+		/* height: 200px; */
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	#headerInner {
+		/* height: fit-
+        content; */
+		flex-flow: column;
+		flex-wrap: wrap;
+	}
+
+	#dropdown {
+		display: block;
+	}
+
+	nav {
+		position: relative;
+		width: 100%;
+		flex: 1 1 100%;
+	}
+	.navbar {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	#title {
+		/* width: 100%;
+		flex: 1 1 100%; */
+	}
+}
+/* header {
+		height: 200px;
+	} */
+/* #headerInner {
+		flex-wrap: wrap;
+	} */
+/* #title { */
+/* display: block; */
+/* width: 100%;
+		flex: 1 1 100%; */
+/* margin: 0 auto; */
+/* }
+	nav { */
+/* float: none; */
+/* position: absolute; */
+/* left: 50%;
+		transform: translateX(-50%); */
+/* margin-top: 80px; */
+/* width: 100%; */
+/* }
+} */
+
+@media screen and (max-width: 460px) {
+	/* nav {
+		margin-top: 100px;
+	} */
+	header {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	#title {
+		font-size: 45px;
+	}
+	.navbar {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 260px) {
+	/* nav {
+		margin-top: 100px;
+	} */
+	#title {
+		/* font-size: 45px; */
+		padding-bottom: 11px;
+	}
+	.nav-item {
+		display: block;
+	}
+
+	.home {
+		position: relative;
+	}
+
+	.navBr {
+		display: none;
+	}
+}

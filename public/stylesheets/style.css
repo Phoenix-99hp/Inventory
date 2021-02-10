@@ -1,414 +1,60 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-#pageContainer {
-    text-align: center;
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
-    height: 100%; 
-}
-
-header {
-    margin-top: 15px;
-    display: flex;
-    flex: 0 1 100px;
-    align-items: center;
-}
-
-#title {
-    flex: 1 0 auto;
-    text-align: center;
-    margin-left: 275.48px;
-    font-size: 32px;
-}
-
-#greeting, #form-title {
-   text-align: center;
-   width: 100%;
-   margin: 0 auto;
-   margin-bottom: 25px;
-   color: black;
-   font-size: 30px;
-   font-weight: bold;
-}
-
-#greetingErr {
-    text-align: center;
-    width: 600px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-    color: red;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-#home-greeting {
-    text-align: center;
-    height: fit-content;
-    margin-bottom: 20px;
-    font-family: 'Gotu', sans-serif;
-    flex: 1 1 100%;
-}
-
-a {
-    color: rgb(0, 183, 255);
-    text-decoration: none;
-}
-
-nav {
-    position: relative;
-    float: right;
-}
-
-.nav-item{
-    display: inline;
-    padding: 8px;
-}
-
-.navbar {
-    padding-left: 0;
-    padding: 10px;
-} 
-
-#title {
-    color: rgb(17, 0, 255);
-    font-size: 60px;
-    font-weight: bold;
-    text-shadow: 2px 1px 2px rgb(0, 183, 255);
-    font-family: 'Gotu', sans-serif;
-}
-
-.home {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-#container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    width: 90%;
-    flex: 1 1 auto;
-    margin-bottom: 50px;
-    align-content:baseline;
-}
-
 #searchResults {
-    display: flex;
-    justify-content: center;
-    flex: 1 1 100%;
-    margin-top: 20px;
-}
-
-.product {
-    padding: 10px;
-    margin: 10px;
-    width: 20%;
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-.product, .product-last {
-    min-width: 178px;
-    max-height: 164px;
-    max-width: 284px;
+	display: flex;
+	justify-content: center;
+	flex: 1 1 100%;
+	margin-top: 20px;
 }
 
 #product-detail {
-    position: relative;
+	position: relative;
 }
 
-#btnContainer {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-}
-
-.product-full{
-    width: 100%;
-}
-
-.product-last{
-    width: 20%;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid black;
-}
-
-.product-name {
-    font-weight: bold;
-    text-align: center;
-}
-
-.p-name{
-    color: rgb(17, 0, 255);
-    font-weight: bold;
-    font-size: 20px;
-    text-shadow: 2px 1px 1px rgb(0, 183, 255);
-    font-family: 'Gotu', sans-serif;
-}
-
-label {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-#errMsg {
-    font-size: 16px;
-    text-align: center;
-}
-
-.u-name {   
-    color: rgb(17, 0, 255);
-    font-weight: bold;
-    text-shadow: 2px 1px 2px rgb(0, 183, 255);
-    font-family: 'Gotu', sans-serif;
-    font-size: 30px;
-}
-
-.body-para {
-    margin-top:10px;
-    text-align: center;
-    font-family: 'Gotu', sans-serif;
-}
-
-.no-results {
-    margin-top:15px;
-    text-align: center;
-    font-family: 'Gotu', sans-serif;
+.product-full {
+	width: 100%;
 }
 
 .body-para-top {
-    text-align: center;
-    font-family: 'Gotu', sans-serif;
-}
-
-form, #product-detail{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 699.109px;
-    min-width: 699.109px;
-    /* width: 600px; */
-    margin: 0 auto;
-    /* margin-bottom: 20px; */
-    margin-top: 20px; 
-    height: fit-content;
-    padding: 15px;
-    background-color: rgb(236, 241, 243);
-    border-radius: 8px;
-   
+	text-align: center;
+	font-family: "Gotu", sans-serif;
 }
 
 .bullets {
-    text-align: center;
-    margin-top: 10px;
+	text-align: center;
+	margin-top: 10px;
 }
 
 .bullets-cat {
-    text-align: center;
+	text-align: center;
 }
 
 .bulleted-top {
-    margin-top: 0px;
-    font-family: 'Gotu', sans-serif;
+	margin-top: 0px;
+	font-family: "Gotu", sans-serif;
 }
 
 .bulleted {
-    margin-top: 5px;
-    font-family: 'Gotu', sans-serif;
+	margin-top: 5px;
+	font-family: "Gotu", sans-serif;
 }
 
 .detail-heading {
-      text-align: center;
-}
-
-.form-group{
-    flex: 1 0 100%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.form-group-single{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-input {
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 20px;
-    outline: none;
-    box-shadow: none;
-}
-
-input, select, textarea {
-    width: 400px;
-    margin-top: 10px;
-    border: 1.5px solid black;
-    border-radius: 10px;
-    font-size: 14px;
-}
-
-input, select {
-    height: 30px; 
-}
-select {
-    width: 423px;
-}
-
-.search {
-    margin-top: 0;
-}
-
-#submitBtn{
-    float: right;
-    margin-left: 5px;
-    border-radius: 5px;
-    background-color: rgb(112, 226, 112);
-    border: 2px solid rgb(112, 226, 112);;
-    color: white;
-    height: 30px;
-    padding-top: 1px;
-    padding-bottom: 2px;
-    font-size: 14px;
-    margin-top: 2.5px;
-}
-
-#deleteBtn{
-    float: right;
-    margin-left: 5px;
-    border-radius: 5px;
-    background-color: red;;
-    border: 2px solid red;
-    color: white;
-    height: 30px;
-    padding-top: 1px;
-    padding-bottom: 2px;
-    font-size: 14px;
-    margin-top: 2.5px;
-}
-
-#update {
-    float: right;
-    background-color: yellow;
-    padding: 6px;
-    border-radius: 10px;
-    border: 2px solid black;
-    color: black;
-    margin-right: 5px;
-    font-size: 14px;
-}
-
-#delete {
-    float: right;
-    background-color: red;
-    padding: 6px;
-    border-radius: 10px;
-    border: 2px solid black;
-    color: white;
-    font-size: 14px;
-}
-
-.center {
-    text-align: center;
-}
-
-.red{
-    color: red;
-}
-
-textarea {
-    resize: none;
-    width: 400px;
-    outline: none;
-    padding: 10px;
+	text-align: center;
 }
 
 footer {
-    flex: 0 1 60px;
-    border-top: 2px solid black;
-    color: rgb(17, 0, 255);
-    font-weight: bold;
-    font-size: 20px;
-    text-shadow: 2px 1px 1px rgb(0, 183, 255);
-    font-family: 'Gotu', sans-serif;
-    line-height: 60px;
-    background-color: rgb(236, 241, 243);
+	flex: 0 1 60px;
+	border-top: 2px solid black;
+	color: rgb(17, 0, 255);
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: 2px 1px 1px rgb(0, 183, 255);
+	font-family: "Gotu", sans-serif;
+	line-height: 60px;
+	background-color: rgb(236, 241, 243);
 }
 
 @media screen and (max-width: 920px) {
-#title {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-}
-nav {
-    float: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 80px;
-    width: 100%;
-}
-
-#container {
-    margin-top: 100px;
-}
-
-#home-greeting {
-    display: none;
-}
-form {
-    margin-top: 0px;
-}
-}
-
-@media screen and (max-width: 348px) {
-    nav {
-        margin-top: 100px;
-    }
+	form {
+		margin-top: 0px;
+	}
 }
